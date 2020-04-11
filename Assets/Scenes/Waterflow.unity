@@ -150,6 +150,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a56b265abcb4c1a9fc8e59712b2310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackgroundTile: {fileID: 5671825880553211341, guid: b59f8a449f2914ee19f939295bb972bb,
+    type: 3}
+  HorizontalPipe: {fileID: 345717220991681341, guid: 39e8ed7a49def46d39f03181ff3b4322,
+    type: 3}
+  RightDownPipe: {fileID: 2042470106398017433, guid: 6856cb9a7d1534666b476d6a64d96ba6,
+    type: 3}
+  RightUpPipe: {fileID: 2042470106398017433, guid: e51476cd5cfa7452ebd5cc8f19b18ba2,
+    type: 3}
+  LeftUpPipe: {fileID: 2042470106398017433, guid: 46e247207783c47f7964c185451dfbea,
+    type: 3}
+  LeftDownPipe: {fileID: 2042470106398017433, guid: 84757fba2a88e4ac0bccb771108c50f0,
+    type: 3}
+  VerticalPipe: {fileID: 345717220991681341, guid: e51c23d0785364840ac30bb1027fa571,
+    type: 3}
 --- !u!4 &295964088
 Transform:
   m_ObjectHideFlags: 0
