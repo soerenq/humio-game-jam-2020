@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Humio
 {
@@ -13,6 +14,7 @@ namespace Humio
         
         private List<Item> _addedItems = new List<Item>();
         
+        private List<string> _randomBadReplies = new List<string>(){"but it failed","but it failed miserably and gave you scars for life", "and nothing happened. What did you expect?"};
 
         private void Awake()
         {
@@ -39,7 +41,7 @@ namespace Humio
             }
             else if(selectedItem != null)
             {
-                Console.Instance.ReplaceText($"Tried dropping {selectedItem.Name} on {droppableName} but it failed");                
+                Console.Instance.ReplaceText($"Tried dropping {selectedItem.Name} on {droppableName} {_randomBadReplies[Random.Range(0,_randomBadReplies.Count)]}");                
             }
             else
             {
