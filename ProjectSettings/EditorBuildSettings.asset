@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: f5f94d706a091ca24812fe2f608365e8
+  - enabled: 1
+    path: Assets/Scenes/Overview.unity
+    guid: 5b648361e3a8a8c44a74df99fc2e6172
+  - enabled: 1
+    path: Assets/Scenes/Test Room.unity
+    guid: 80aa08aba8d937244b8219fa8d815d31
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: 5793ef4d4c3a6003194b5f3e1b84bb82
+  - enabled: 1
+    path: Assets/Scenes/Study.unity
+    guid: 0d6dc01c3d633478d8b73cb5810fe2cc
+  - enabled: 1
+    path: Assets/Scenes/KItchen.unity
+    guid: aff6634a260527613b10251ea506dd39
+  - enabled: 1
+    path: Assets/Scenes/Pantry.unity
+    guid: 86980498e1a08ad17865f7560ba557b0
   m_configObjects: {}
