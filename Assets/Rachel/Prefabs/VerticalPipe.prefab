@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmptyPipe: {fileID: 21300000, guid: 22618194b62f6485aab94e3c08b11cbc, type: 3}
   FilledPipe: {fileID: 21300000, guid: 9900268ae26da43cdb202d61f90f272d, type: 3}
+  pipeType: 2
 --- !u!1 &4352041460361835627
 GameObject:
   m_ObjectHideFlags: 0

@@ -164,6 +164,9 @@ MonoBehaviour:
     type: 3}
   VerticalPipe: {fileID: 345717220991681341, guid: e51c23d0785364840ac30bb1027fa571,
     type: 3}
+  start: {fileID: 0}
+  end: {fileID: 0}
+  pipeGrid: []
   pipeBarContent:
   - {fileID: 345717220991681341, guid: 39e8ed7a49def46d39f03181ff3b4322, type: 3}
   - {fileID: 2042470106398017433, guid: 84757fba2a88e4ac0bccb771108c50f0, type: 3}

@@ -9,6 +9,10 @@ public class Pipe : MonoBehaviour
 
    private SpriteRenderer pipeSprite;
 
+   public enum PipeType {LeftDownPipe, LeftUpPipe, VerticalPipe, RightUpPipe, RightDownPipe, HorizontalPipe}
+
+    public PipeType pipeType; 
+
    private void Awake() {
        pipeSprite = GetComponentInChildren<SpriteRenderer>();
    }
@@ -21,4 +25,10 @@ public class Pipe : MonoBehaviour
            pipeSprite.sprite = EmptyPipe;
        }
    }
+
+   public PipeType GetPipeType() {
+       return pipeType;
+   }
+
+  
 }
