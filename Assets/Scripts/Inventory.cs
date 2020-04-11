@@ -32,10 +32,12 @@ namespace Humio
             {
                 if (_selected == value)
                 {
+                    Console.Instance.AddText($"You put {_selected.Name} back in bag");
                     _selected = null;
                 }
                 else
                 {
+                    Console.Instance.AddText($"You grab {_selected.Name} from your bag. By inspection, you describe it as: {_selected.Description}");
                     _selected = value;                    
                 }
             }
@@ -58,9 +60,11 @@ namespace Humio
         {
             if (_items.Count >= _space)
             {
+                Console.Instance.AddText($"Your bag is full!");
                 Debug.Log("Insufficient space");
                 return false;
             }
+            Console.Instance.AddText($"You put {_selected.Name} in your bag");
             _items.Add(item);
             onItemAdd?.Invoke(item);
             return true;
