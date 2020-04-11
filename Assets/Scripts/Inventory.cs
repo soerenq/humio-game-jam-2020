@@ -77,6 +77,10 @@ namespace Humio
         public void Remove(Item item)
         {
             _items.Remove(item);
+            if (_selected == item)
+            {
+                _selected = null;
+            }
             onItemRemove?.Invoke(item);
         }
     }
