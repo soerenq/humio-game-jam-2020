@@ -6,6 +6,7 @@ namespace Humio
     public class InventorySlot : MonoBehaviour
     {
         [SerializeField] private Image icon;
+        [SerializeField] private Button _button;
         
         private Item _item;
 
@@ -16,6 +17,7 @@ namespace Humio
             _item = item;
             icon.sprite = _item.Icon;
             icon.enabled = true;
+            _button.onClick.AddListener(() => Inventory.Instance.Selected = item);
         }
 
         public void RemoveItem()
@@ -23,6 +25,7 @@ namespace Humio
             _item = null;
             icon.sprite = null;
             icon.enabled = false;
+            _button.onClick.RemoveAllListeners();
         }
     }
 }

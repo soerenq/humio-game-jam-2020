@@ -14,14 +14,31 @@ namespace Humio
 
         public Action<Item> onItemAdd;
         public Action<Item> onItemRemove;
+        private Item _selected;
 
-        
+
         public static Inventory Instance => _instance;
 
         public int Space
         {
             get => _space;
             set => _space = value;
+        }
+
+        public Item Selected
+        {
+            get => _selected;
+            set
+            {
+                if (_selected == value)
+                {
+                    _selected = null;
+                }
+                else
+                {
+                    _selected = value;                    
+                }
+            }
         }
 
         private void Awake()
@@ -54,6 +71,5 @@ namespace Humio
             _items.Remove(item);
             onItemRemove?.Invoke(item);
         }
-        
     }
 }
