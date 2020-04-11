@@ -18,7 +18,7 @@ namespace Humio
             }
 
             Console.Instance.AddText(
-                $"Received: {produces.Aggregate("", (current, next) => current + ", " + next.Name)}");
+                $"Received: {produces.Aggregate("", (current, next) => current + (current.Equals("")? "" : ", ") + next.Name)}");
         }
     }
 }
