@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Spider : MonoBehaviour
 {
+    const float SPEED = 50f; // Per second
+
     public RectTransform target;
     
     // Start is called before the first frame update
@@ -36,8 +36,8 @@ public class Spider : MonoBehaviour
                 curVelo.z = 0f;
             }
         }
-        rt.Translate(curVelo);
-        curVelo *= 0.85f;
+        rt.Translate(Time.deltaTime * SPEED * curVelo);
+        curVelo *= Mathf.Pow(0.85f, Time.deltaTime * 50f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
