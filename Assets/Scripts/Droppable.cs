@@ -14,7 +14,7 @@ namespace Humio
         
         private List<Item> _addedItems = new List<Item>();
         
-        private List<string> _randomBadReplies = new List<string>(){"but it failed","but it failed miserably and gave you scars for life", "and nothing happened. What did you expect?"};
+        private List<string> _randomBadReplies = new List<string>(){"but it failed","but it failed miserably and gave you scars for life", "and nothing happened. What did you expect?", "but did so in vain", "but it fell short", "but it turned out to be a bad idea"};
 
         private void Awake()
         {
@@ -41,7 +41,8 @@ namespace Humio
             }
             else if(selectedItem != null)
             {
-                Console.Instance.ReplaceText($"Tried dropping {selectedItem.Name} on {droppableName} {_randomBadReplies[Random.Range(0,_randomBadReplies.Count)]}");                
+                Console.Instance.ReplaceText($"You spent a minute trying to drop {selectedItem.Name} on {droppableName} {_randomBadReplies[Random.Range(0,_randomBadReplies.Count)]}");
+                Counter.Instance.AddPenalty(60f);
             }
             else
             {
