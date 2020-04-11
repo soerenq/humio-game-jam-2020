@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Room.unity
     guid: 80aa08aba8d937244b8219fa8d815d31
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: 5793ef4d4c3a6003194b5f3e1b84bb82
   m_configObjects: {}
