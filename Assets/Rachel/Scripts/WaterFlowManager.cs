@@ -12,9 +12,7 @@ public class WaterFlowManager : MonoBehaviour
     public GameObject LeftDownPipe;
     public GameObject VerticalPipe;
 
-    public GameObject start;
-
-    public GameObject end;
+    public GameObject endPipe;
 
     public List<GameObject> pipeGrid;
 
@@ -64,6 +62,21 @@ public class WaterFlowManager : MonoBehaviour
                                     Debug.Log("Placing pipe");
                                     hitData.collider.gameObject.GetComponent<BgTile>().pipeOnBg = Instantiate(SelectedPipe, hitData.transform.position, Quaternion.identity);
                                     SelectedPipe = null;
+                                    // check if game won
+                                    
+                                    foreach (GameObject Go in pipeGrid)
+                                    {
+                                        BgTile bgt = Go.GetComponent<BgTile>();
+                                        if (bgt.transform.position.x == endPipe.transform.position.x - 1 && bgt.transform.position.y == endPipe.transform.position.y) {
+                                            if (bgt.pipeOnBg != null) {
+                                                if (bgt.pipeOnBg.GetComponent<Pipe>().pipeType == Pipe.PipeType.HorizontalPipe || bgt.pipeOnBg.GetComponent<Pipe>().pipeType == Pipe.PipeType.LeftUpPipe || bgt.pipeOnBg.GetComponent<Pipe>().pipeType == Pipe.PipeType.LeftDownPipe)
+                                                Debug.Log("HEJ");
+                                            }
+                                            
+                                        }
+                                    }
+                                
+                                    
                                 }                        
                         }
                     }
@@ -103,7 +116,9 @@ public class WaterFlowManager : MonoBehaviour
             if (bg.transform.position.x == (clickedTile.transform.position.x + x) && bg.transform.position.y == (clickedTile.transform.position.y + y)){     
                 if(bg.GetComponent<BgTile>().pipeOnBg != null){
                     var pipe = bg.GetComponent<BgTile>().pipeOnBg;
-                    return isPipeConnectionLegal(pipe.GetComponent<Pipe>().pipeType, x, y);                       
+                    
+                    return isPipeConnectionLegal(pipe.GetComponent<Pipe>().pipeType, x, y); 
+                                          
                 }
 
             }
@@ -130,6 +145,10 @@ public class WaterFlowManager : MonoBehaviour
         }
     }
 
+    public bool isPipeConnectionEnd(float xToTest, float yToTest){
+        return endPipe.transform.position.x == xToTest && endPipe.transform.position.y == yToTest; 
+    }
+
 
     private void generateBackground() {
         
@@ -139,7 +158,7 @@ public class WaterFlowManager : MonoBehaviour
             }
         }
         generatePipeBar();
-        PlacePipes();
+        PlaceStartAndEndPipe();
     }
 
 
@@ -154,13 +173,20 @@ public class WaterFlowManager : MonoBehaviour
         }
     }
 
-    private void PlacePipes() {
-        // place start pipe
+    private void PlaceStartAndEndPipe() {
         foreach (GameObject Go in pipeGrid)
         {
             BgTile bgt = Go.GetComponent<BgTile>();
+
+            //Start pipe
             if (bgt.transform.position.x == 0 && bgt.transform.position.y == 2) {
                 bgt.pipeOnBg = Instantiate(HorizontalPipe, new Vector3(0,2,0), Quaternion.identity);
+            }
+
+            //End pipe
+            if (bgt.transform.position.x == gridWidth-1 && bgt.transform.position.y == 3) {
+                endPipe = Instantiate(HorizontalPipe, new Vector3(gridWidth-1,3,0), Quaternion.identity);
+                bgt.pipeOnBg = endPipe;
             }
         }
         
