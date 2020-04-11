@@ -12,11 +12,29 @@ public class Spider : MonoBehaviour
         
     }
 
+    private Vector3 curVelo = Vector3.zero;
+
     // Update is called once per frame
     void Update()
     {
         var rt = (RectTransform) this.transform;
-        var direction = (target.position - rt.position).normalized;
-        rt.Translate(0.8f * direction);
+        if (curVelo.magnitude < 0.15f)
+        {
+            // Find new velocity.
+            var toTarget = (target.position - rt.position);
+            if (toTarget.magnitude < 150)
+            {
+                // Close by...
+                var direction = toTarget.normalized;
+                curVelo = 4f * direction;
+            }
+            else
+            {
+                curVelo = 5f * Random.insideUnitSphere;
+                curVelo.z = 0f;
+            }
+        }
+        rt.Translate(curVelo);
+        curVelo *= 0.85f;
     }
 }
