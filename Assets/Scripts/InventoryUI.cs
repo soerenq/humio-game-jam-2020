@@ -18,6 +18,7 @@ namespace Humio
             _inventorySlots = GetComponentsInChildren<InventorySlot>();
             _inventory.Space = _inventorySlots.Length;
         }
+        
 
         private void AddItem(Item item)
         {

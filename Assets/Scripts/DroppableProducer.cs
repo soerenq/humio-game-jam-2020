@@ -14,11 +14,11 @@ namespace Humio
             foreach (var item in produces)
             {
                 Debug.Log($"Produced {item.Name}");
-                Inventory.Instance.Add(item);
+                Inventory.Instance.Add(item, true);
             }
 
             Console.Instance.AddText(
-                $"Received: {produces.Aggregate("", (current, next) => current + ", " + next.Name)}");
+                $"Received: {produces.Aggregate("", (current, next) => current + (current.Equals("")? "" : ", ") + next.Name)}");
         }
     }
 }
