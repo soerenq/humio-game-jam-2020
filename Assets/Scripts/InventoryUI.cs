@@ -16,6 +16,7 @@ namespace Humio
             _inventory.onItemAdd += AddItem;
             _inventory.onItemRemove += RemoveItem;
             _inventorySlots = GetComponentsInChildren<InventorySlot>();
+            _inventory.Space = _inventorySlots.Length;
         }
 
         private void AddItem(Item item)
@@ -26,6 +27,7 @@ namespace Humio
                 {
                     _inventorySlots[i].AddItem(item);
                     _itemToInventorySlot.Add(item, _inventorySlots[i]);
+                    return;
                 }
 
             }

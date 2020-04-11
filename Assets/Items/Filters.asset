@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
-  m_Name: LightBulb
+  m_Name: Filters
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 0197f4a5afcc194c4a066a8676b3654e, type: 3}
-  name: Light bulb
-  description: Automatically casts the lumos spell once it's plugged in
+  icon: {fileID: 21300000, guid: 47304e5b85aa582858c169c20fd1e374, type: 3}
+  name: Filters
+  description: Used to brew potion of awareness
