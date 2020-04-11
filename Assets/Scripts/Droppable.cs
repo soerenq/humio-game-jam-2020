@@ -29,7 +29,7 @@ namespace Humio
             var selectedItem = Inventory.Instance.Selected;
             if (requires.Contains(selectedItem) && (!orderMatters || requires[_addedItems.Count] == selectedItem))
             {
-                Console.Instance.ReplaceText($"Successfully dropped {selectedItem} on {droppableName}");
+                Console.Instance.ReplaceText($"Successfully dropped {selectedItem.Name} on {droppableName}");
                 Inventory.Instance.Remove(selectedItem);
                 _addedItems.Add(selectedItem);
                 if (_addedItems.Count == requires.Count)
@@ -39,7 +39,7 @@ namespace Humio
             }
             else if(selectedItem != null)
             {
-                Console.Instance.ReplaceText($"Tried dropping {selectedItem} on {droppableName} but it failed");                
+                Console.Instance.ReplaceText($"Tried dropping {selectedItem.Name} on {droppableName} but it failed");                
             }
             else
             {
