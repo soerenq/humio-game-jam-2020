@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
   m_Name: Jug
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 81df9a8c987bc8d11b213855239f545c, type: 3}
   name: Jug
   description: Empty. Looks good for liquids
