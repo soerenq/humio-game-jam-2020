@@ -32,12 +32,12 @@ namespace Humio
             {
                 if (_selected == value)
                 {
-                    Console.Instance.AddText($"You put {value.Name} back in bag");
+                    Console.Instance.ReplaceText($"You put {value.Name} back in bag");
                     _selected = null;
                 }
                 else
                 {
-                    Console.Instance.AddText($"You grab {value.Name} from your bag. By inspection, you describe it as: {value.Description}");
+                    Console.Instance.ReplaceText($"You grab {value.Name} from your bag. By inspection, you describe it as: {value.Description}");
                     _selected = value;                    
                 }
             }
@@ -56,15 +56,19 @@ namespace Humio
             }
         }
 
-        public bool Add(Item item)
+        public bool Add(Item item, bool producer = false)
         {
             if (_items.Count >= _space)
             {
-                Console.Instance.AddText($"Your bag is full!");
+                Console.Instance.ReplaceText($"Your bag is full!");
                 Debug.Log("Insufficient space");
                 return false;
             }
-            Console.Instance.AddText($"You put {item.Name} in your bag");
+
+            if (!producer)
+            {
+                Console.Instance.ReplaceText($"You put {item.Name} in your bag");                
+            }
             _items.Add(item);
             onItemAdd?.Invoke(item);
             return true;

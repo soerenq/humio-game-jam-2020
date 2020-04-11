@@ -26,9 +26,14 @@ namespace Humio
             }
         }
 
-        public void AddText(String text)
+        public void ReplaceText(string text)
         {
             _text.text = text;
+        }
+
+        public void AddText(string text)
+        {
+            _text.text += $"\n{text}";
         }
     }
 }

@@ -8,6 +8,9 @@ namespace Humio
     {
         [SerializeField] private List<Item> requires;
         [SerializeField] private bool orderMatters;
+        [SerializeField] private string droppableName;
+        [SerializeField] private string description;
+        
         private List<Item> _addedItems = new List<Item>();
         
 
@@ -15,7 +18,7 @@ namespace Humio
         {
             if (requires == null)
             {
-                Debug.LogError($"{name} requires item requirement");                
+                Debug.LogError($"{droppableName} requires item requirement");                
             }
         }
 
@@ -26,7 +29,7 @@ namespace Humio
             var selectedItem = Inventory.Instance.Selected;
             if (requires.Contains(selectedItem) && (!orderMatters || requires[_addedItems.Count] == selectedItem))
             {
-                Console.Instance.AddText($"Successfully dropped {selectedItem} on {name}");
+                Console.Instance.ReplaceText($"Successfully dropped {selectedItem} on {droppableName}");
                 Inventory.Instance.Remove(selectedItem);
                 _addedItems.Add(selectedItem);
                 if (_addedItems.Count == requires.Count)
@@ -36,7 +39,11 @@ namespace Humio
             }
             else if(selectedItem != null)
             {
-                Console.Instance.AddText($"Tried dropping {selectedItem} on {name} but it failed");                
+                Console.Instance.ReplaceText($"Tried dropping {selectedItem} on {droppableName} but it failed");                
+            }
+            else
+            {
+                Console.Instance.ReplaceText($"It's a {droppableName}. {description}");
             }
 
 
