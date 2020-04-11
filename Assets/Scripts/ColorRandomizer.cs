@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorRandomizer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Button]
+    void Colorize()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (Transform t in transform)
+        {
+            t.GetComponent<Image>().color = new Color(Random.value, Random.value, Random.value, 1);
+        }
     }
 }
