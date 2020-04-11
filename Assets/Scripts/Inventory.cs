@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Humio
@@ -16,6 +17,9 @@ namespace Humio
         public Action<Item> onItemRemove;
         private Item _selected;
 
+        [SerializeField] private SpriteRenderer floatingSpritePrefab;
+        private SpriteRenderer _floatingSpriteInstance;
+        private Camera _camera;
 
         public static Inventory Instance => _instance;
 
@@ -43,6 +47,7 @@ namespace Humio
             }
         }
 
+
         private void Awake()
         {
             if (_instance == null)
@@ -53,6 +58,26 @@ namespace Humio
             else
             {
                 Destroy(gameObject);
+            }
+        }
+
+
+        private void Update()
+        {
+            if (_selected != null)
+            {
+                if (_floatingSpriteInstance == null)
+                {
+                    _floatingSpriteInstance = Instantiate<SpriteRenderer>(floatingSpritePrefab);
+                }
+
+                _floatingSpriteInstance.transform.position =
+                    Camera.main.ScreenPointToRay(Input.mousePosition).GetPoint(10);
+                _floatingSpriteInstance.sprite = _selected.Icon;
+                
+            } else if (_floatingSpriteInstance != null)
+            {
+                Destroy(_floatingSpriteInstance.gameObject);
             }
         }
 

@@ -183,6 +183,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7970753056963859523, guid: 9b364fba1447c2e6bb06075f3a62c804,
+        type: 3}
+      propertyPath: floatingSpritePrefab
+      value: 
+      objectReference: {fileID: 4564270944796115588, guid: 4a2a4c3918a399f3a9bb8e8a5beb2803,
+        type: 3}
     - target: {fileID: 7970753056963859524, guid: 9b364fba1447c2e6bb06075f3a62c804,
         type: 3}
       propertyPath: m_Name
