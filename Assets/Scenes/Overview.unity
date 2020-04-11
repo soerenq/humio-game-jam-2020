@@ -840,6 +840,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7923381737899514695, guid: a7db38302e3b5ac44a6e222530b326bb,
+        type: 3}
+      propertyPath: m_Name
+      value: Waldo
+      objectReference: {fileID: 0}
     - target: {fileID: 7923381737899514712, guid: a7db38302e3b5ac44a6e222530b326bb,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -869,6 +874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923381737899514713, guid: a7db38302e3b5ac44a6e222530b326bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Waldo
       objectReference: {fileID: 0}
     - target: {fileID: 7923381738062993220, guid: a7db38302e3b5ac44a6e222530b326bb,
         type: 3}
