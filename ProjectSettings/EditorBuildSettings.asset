@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KItchen.unity
     guid: aff6634a260527613b10251ea506dd39
+  - enabled: 1
+    path: Assets/Scenes/Pantry.unity
+    guid: 86980498e1a08ad17865f7560ba557b0
   m_configObjects: {}
