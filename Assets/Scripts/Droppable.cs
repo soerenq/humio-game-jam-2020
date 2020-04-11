@@ -1,11 +1,15 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Humio
 {
     public class Droppable : Interactable
     {
-        [SerializeField] private Item requires;
+        [SerializeField] private List<Item> requires;
+        [SerializeField] private bool orderMatters;
+        private List<Item> _addedItems = new List<Item>();
+        
 
         private void Awake()
         {
@@ -20,11 +24,15 @@ namespace Humio
             base.Interact();
             // Select in inventory
             var selectedItem = Inventory.Instance.Selected;
-            if (requires.Equals(selectedItem))
+            if (requires.Contains(selectedItem) && (!orderMatters || requires[_addedItems.Count] == selectedItem))
             {
                 Debug.Log($"Successfully dropped {selectedItem} on {name}");
                 Inventory.Instance.Remove(selectedItem);
-                Trigger();
+                _addedItems.Add(selectedItem);
+                if (_addedItems.Count == requires.Count)
+                {
+                    Trigger();
+                }
             }
             else if(selectedItem != null)
             {
