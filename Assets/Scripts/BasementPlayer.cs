@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BasementPlayer : MonoBehaviour
 {
+
+    public bool alive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,8 @@ public class BasementPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!alive) return;
+        
         var rt = (RectTransform) this.transform;
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -34,5 +40,10 @@ public class BasementPlayer : MonoBehaviour
             rt.localRotation = Quaternion.Euler(0f, 0f, 270f);
             rt.Translate(1f, 0f, 0f);
         }
+    }
+
+    public void OnTouchedBySpider()
+    {
+        alive = false;
     }
 }

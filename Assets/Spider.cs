@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spider : MonoBehaviour
 {
@@ -36,5 +38,16 @@ public class Spider : MonoBehaviour
         }
         rt.Translate(curVelo);
         curVelo *= 0.85f;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Spider hit {0}", other);
+        var otherGO = other.gameObject;
+        var player = other.GetComponent<BasementPlayer>();
+        if (player != null)
+        {
+            player.OnTouchedBySpider();
+        }
     }
 }
