@@ -6,7 +6,7 @@ public class SceneLoader : MonoBehaviour
 {
 	public void LoadScene(string sceneName)
 	{
-		Console.Instance.AddText($"You enter {sceneName}");
-		SceneManager.LoadScene(sceneName); // Additive? hm.
+		Console.Instance.ReplaceText($"You enter {sceneName}");
+	   	SceneManager.LoadScene(sceneName); // Additive? hm.
 	}
 }
