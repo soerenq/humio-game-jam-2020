@@ -1,33 +1,63 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PantryController : MonoBehaviour
 {
-    private bool _isActive = false;
+    [SerializeField] private Rigidbody2D boy;
+    [SerializeField] private int jumpHeight = 100;
     
+    private bool _isActive;
+    private SpriteRenderer _spriteInstance;
+    private Vector3 _initialPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _spriteInstance = gameObject.GetComponent<SpriteRenderer>();
+        _initialPosition = _spriteInstance.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonUp(0))
-        {
-            _isActive = false;
-        }
-
         if(_isActive)
         {
-            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousePos;
-            // if you want to smooth movement then lerp it
+            _spriteInstance.transform.position = Camera.main.ScreenPointToRay(Input.mousePosition).GetPoint(10);
         }
     }
-    
+
     void OnMouseDown()
     {
+        Debug.Log($"Activated pantry controller. Current position = {_spriteInstance.transform.position}");
         _isActive = true;
+    }
+
+    private void OnMouseUp()
+    {
+        Debug.Log($"Released pantry controller Current position = {_spriteInstance.transform.position}");
+        _isActive = false;
+
+        JumpTowardPoint();
+        
+        Debug.Log($"Resetting position to position = {_initialPosition}");
+        _spriteInstance.transform.position = _initialPosition;
+    }
+    
+    void JumpTowardPoint()
+    {
+        var initialVelocity = CalculateJumpSpeed();
+        var direction = CalculateDirection();
+ 
+        boy.AddForce(initialVelocity * direction, ForceMode2D.Impulse);
+    }
+
+    private Vector3 CalculateDirection()
+    {
+        return _initialPosition - _spriteInstance.transform.position;
+    }
+
+    private float CalculateJumpSpeed()
+    {
+        return Mathf.Sqrt(2 * jumpHeight * Physics.gravity.magnitude);
     }
 }
