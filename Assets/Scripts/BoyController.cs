@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class PantryController : MonoBehaviour
+public class BoyController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D boy;
     [SerializeField] private int jumpHeight = 100;
