@@ -825,6 +825,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6181515625617321745, guid: a7db38302e3b5ac44a6e222530b326bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Kitchen
+      objectReference: {fileID: 0}
     - target: {fileID: 6181515625617321747, guid: a7db38302e3b5ac44a6e222530b326bb,
         type: 3}
       propertyPath: m_Color.r
