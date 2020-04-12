@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Test Room.unity
     guid: 80aa08aba8d937244b8219fa8d815d31
   - enabled: 1
-    path: Assets/Scenes/Bathroom.unity
+    path: Assets/Scenes/TheEnd.unity
     guid: 5793ef4d4c3a6003194b5f3e1b84bb82
   - enabled: 1
     path: Assets/Scenes/Study.unity
@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Waterflow.unity
     guid: 6a5812953bc6046b88cc05b4e3092f11
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 8ae881631bcb11a37b4d8dc6ecf9d003
   m_configObjects: {}

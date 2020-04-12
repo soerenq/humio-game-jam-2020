@@ -237,25 +237,55 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.79215693
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.86274517
+      objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_text
+      value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e9abbb1b17fa0419ba72444935abb7, type: 3}
@@ -387,25 +417,55 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.054901965
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_text
+      value: Study
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e9abbb1b17fa0419ba72444935abb7, type: 3}
@@ -430,12 +490,12 @@ PrefabInstance:
     - target: {fileID: 5510165453990048334, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_Name
-      value: Bathroom
+      value: Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 5510165453990048336, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Bathroom
+      value: Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 5510165453990048337, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
@@ -542,10 +602,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.3254272
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.92441005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
@@ -565,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_text
-      value: Bathroom
+      value: Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
@@ -585,7 +660,7 @@ PrefabInstance:
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_fontSize
-      value: 34.6
+      value: 44.75
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
@@ -722,25 +797,55 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.10588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510165453990048338, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.2392157
+      objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_text
+      value: Pantry
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060959202906630352, guid: 51e9abbb1b17fa0419ba72444935abb7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51e9abbb1b17fa0419ba72444935abb7, type: 3}
