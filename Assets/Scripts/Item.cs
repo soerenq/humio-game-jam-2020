@@ -11,16 +11,12 @@ namespace Humio
         [SerializeField] private Sprite icon;
         [SerializeField] private string name;
         [SerializeField] private string description;
-        [SerializeField] private List<Item> ingredients;
-        // TODO could have action here, that will be triggered on click?
 
         public Sprite Icon => icon;
 
         public string Name => name;
 
         public string Description => description;
-
-        public List<Item> Ingredients => ingredients;
     }    
 }
 
