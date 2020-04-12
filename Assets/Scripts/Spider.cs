@@ -14,30 +14,30 @@ public class Spider : MonoBehaviour
         
     }
 
-    private Vector3 curVelo = Vector3.zero;
-
     // Update is called once per frame
     void Update()
     {
         var rt = (RectTransform) this.transform;
-        if (curVelo.magnitude < 0.15f)
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb.velocity.magnitude < 0.15f * SPEED)
         {
+            Vector3 newVelo;
             // Find new velocity.
             var toTarget = (target.position - rt.position);
             if (toTarget.magnitude < 150)
             {
                 // Close by...
                 var direction = toTarget.normalized;
-                curVelo = 4f * direction;
+                newVelo = 4f * direction;
             }
             else
             {
-                curVelo = 5f * Random.insideUnitSphere;
-                curVelo.z = 0f;
+                newVelo = 5f * Random.insideUnitSphere;
+                newVelo.z = 0f;
             }
+
+            rb.velocity = SPEED * newVelo;
         }
-        rt.Translate(Time.deltaTime * SPEED * curVelo);
-        curVelo *= Mathf.Pow(0.85f, Time.deltaTime * 50f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
