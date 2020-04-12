@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 47304e5b85aa582858c169c20fd1e374, type: 3}
+  icon: {fileID: 21300000, guid: a26252f0b2d695501ac56897afeb49a1, type: 3}
   name: Hammer
   description: Used to smash things
