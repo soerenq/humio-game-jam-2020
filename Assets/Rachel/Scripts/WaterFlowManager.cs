@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Humio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,6 +26,8 @@ public class WaterFlowManager : MonoBehaviour
 
     public GameObject WaterJugReward;
     public GameObject WaterJugEmpty;
+
+    [SerializeField] private Item reward;
 
     private bool testFilled = false;
 
@@ -262,5 +265,6 @@ public class WaterFlowManager : MonoBehaviour
     private void spawnWaterJug(){
         Instantiate(WaterJugReward, new Vector3(gridWidth, 3, 0), Quaternion.identity);
         Destroy(WaterJugEmpty);
+        Inventory.Instance.Add(reward);
     } 
 }

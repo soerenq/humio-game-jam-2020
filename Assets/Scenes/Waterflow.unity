@@ -244,6 +244,7 @@ MonoBehaviour:
     type: 3}
   WaterJugEmpty: {fileID: 6437165669501060434, guid: 2b21c4fa7935a40579f1c13d6f55d7b1,
     type: 3}
+  reward: {fileID: 11400000, guid: 56c7ccbc3a10c82da93aae7fc9e01f2d, type: 2}
 --- !u!4 &295964088
 Transform:
   m_ObjectHideFlags: 0

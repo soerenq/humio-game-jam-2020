@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 1872566284}
   - component: {fileID: 1872566283}
   - component: {fileID: 1872566286}
-  - component: {fileID: 1872566285}
+  - component: {fileID: 1872566287}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -1299,25 +1299,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1872566285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872566282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e0a865c1d84d7bb5576743783ab2e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requires:
-  - {fileID: 11400000, guid: d61427f4673d570059f2ace5f119f49f, type: 2}
-  orderMatters: 0
-  droppableName: A sink
-  description: A contraption that produces a blue substance.
-  produces:
-  - {fileID: 11400000, guid: 56c7ccbc3a10c82da93aae7fc9e01f2d, type: 2}
 --- !u!61 &1872566286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1344,6 +1325,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.14, y: 1.84}
   m_EdgeRadius: 0
+--- !u!114 &1872566287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872566282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d0ae87e2ed46e38a0569a1362b46c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requires:
+  - {fileID: 11400000, guid: d61427f4673d570059f2ace5f119f49f, type: 2}
+  orderMatters: 0
+  droppableName: A sink
+  description: A contraption that produces a blue substance.
+  sceneName: Waterflow
 --- !u!1 &1918750456
 GameObject:
   m_ObjectHideFlags: 0
