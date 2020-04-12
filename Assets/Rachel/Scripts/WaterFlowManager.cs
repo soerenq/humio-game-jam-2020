@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaterFlowManager : MonoBehaviour
 {
@@ -89,6 +90,10 @@ public class WaterFlowManager : MonoBehaviour
                     }
     }
 
+    public void onOverviewButtonClick(){
+       SceneManager.LoadScene("Overview");
+    }
+    
     private bool isPipeNextToLatestPipe(GameObject clickedTile) {
         GameObject LastTile = pipeList[pipeList.Count - 1].gameObject;
        /* if (LastTile.transform.position.x - clickedTile.transform.position.x < 1 || LastTile.transform.position.x - clickedTile.transform.position.x > 1) {
