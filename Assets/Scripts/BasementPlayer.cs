@@ -47,9 +47,11 @@ public class BasementPlayer : MonoBehaviour
     }
 
 
-    private static void MoveAhead(RectTransform rt)
+    private void MoveAhead(RectTransform rt)
     {
-        rt.Translate(SPEED * Time.deltaTime, 0f, 0f);
+        var rb = GetComponent<Rigidbody2D>();
+        var direction = rt.localRotation * Vector3.right;
+        rb.velocity = SPEED * direction; 
     }
 
     public void OnTouchedBySpider()
