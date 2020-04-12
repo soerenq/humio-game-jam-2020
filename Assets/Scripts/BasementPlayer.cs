@@ -52,4 +52,9 @@ public class BasementPlayer : MonoBehaviour
     {
         alive = false;
     }
+    public void OnTouchingCrate()
+    {
+        //TODO
+    }
+
 }
