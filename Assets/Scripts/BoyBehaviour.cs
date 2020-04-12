@@ -6,10 +6,21 @@ using UnityEngine;
 
 public class BoyBehaviour : MonoBehaviour
 {
+    private PlayerController _playerController;
+    [SerializeField] private BoxCollider2D coffeBeansCollider;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        // here be dragons
+        _playerController = FindObjectOfType<PlayerController>();
+        _playerController.gameObject.SetActive(false);
+        coffeBeansCollider.enabled = true;
+    }
+    
+    private void OnDestroy()
+    {
+        _playerController.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

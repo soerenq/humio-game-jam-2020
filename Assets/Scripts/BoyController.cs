@@ -1,10 +1,14 @@
 ﻿using System;
+using Humio;
 using UnityEngine;
 
 public class BoyController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D boy;
     [SerializeField] private int jumpHeight = 100;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip scream;
+    [SerializeField] private BoxCollider2D coffeBeansCollider;
     
     private bool _isActive;
     private SpriteRenderer _spriteInstance;
@@ -15,6 +19,9 @@ public class BoyController : MonoBehaviour
     {
         _spriteInstance = gameObject.GetComponent<SpriteRenderer>();
         _initialPosition = _spriteInstance.transform.position;
+        
+        // here be dragons
+        coffeBeansCollider.enabled = false;
     }
 
     // Update is called once per frame
@@ -49,6 +56,8 @@ public class BoyController : MonoBehaviour
         var direction = CalculateDirection();
  
         boy.AddForce(initialVelocity * direction, ForceMode2D.Impulse);
+        
+        audioPlayer.PlayOneShot(scream);
     }
 
     private Vector3 CalculateDirection()
