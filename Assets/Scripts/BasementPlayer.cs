@@ -21,27 +21,31 @@ public class BasementPlayer : MonoBehaviour
         if (!alive) return;
         
         var rt = (RectTransform) this.transform;
+        var dx = 0f;
+        var dy = 0f;
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rt.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            MoveAhead(rt);
+            dx = 1f;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rt.localRotation = Quaternion.Euler(0f, 0f, 180f);
-            MoveAhead(rt);
+            dx = -1f;
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            rt.localRotation = Quaternion.Euler(0f, 0f, 90f);
-            MoveAhead(rt);
+            dy = 1f;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            rt.localRotation = Quaternion.Euler(0f, 0f, 270f);
-            MoveAhead(rt);
+            dy = -1f;
         }
+
+        if (Mathf.Abs(dx) == 0f && Mathf.Abs(dy) == 0f) return;
+        rt.localRotation = Quaternion.EulerAngles(0f, 0f, Mathf.Atan2(dy, dx));
+        MoveAhead(rt);
     }
+
 
     private static void MoveAhead(RectTransform rt)
     {
