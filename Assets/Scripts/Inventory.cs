@@ -16,14 +16,15 @@ namespace Humio
         public Action<Item> onItemAdd;
         public Action<Item> onItemRemove;
         private Item _selected;
-
+        
         [SerializeField] private SpriteRenderer floatingSpritePrefab;
         private SpriteRenderer _floatingSpriteInstance;
         private Camera _camera;
-
+    
+        private Dictionary<string, List<Item>> _externalItems = new Dictionary<string, List<Item>>();
         public static Inventory Instance => _instance;
 
-        public int Space
+        public int Space    
         {
             get => _space;
             set => _space = value;
@@ -108,5 +109,31 @@ namespace Humio
             }
             onItemRemove?.Invoke(item);
         }
+
+        public void AddExternalItem(string key, Item item)
+        {
+            if(_externalItems.TryGetValue(key, out List<Item> value))
+            {
+                value.Add(item);
+            }
+            else
+            {
+                _externalItems[key] = new List<Item>(){item};
+            }
+        }
+
+        public List<Item> GetExternalItems(string key)
+        {
+            if (_externalItems.TryGetValue(key, out List<Item> value))
+            {
+                return value;                
+            }
+            else
+            {
+                return new List<Item>();
+            }
+
+        }
+
     }
 }

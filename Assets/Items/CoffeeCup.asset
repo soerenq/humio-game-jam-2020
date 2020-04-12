@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
-  m_Name: CoffeePot
+  m_Name: CoffeeCup
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  name: Coffee pot
-  description: 
-  ingredients: []
+  icon: {fileID: 21300000, guid: e302ee5df3f83337bb5cc21ec8b28009, type: 3}
+  name: Coffee cup
+  description: It's empty and useless

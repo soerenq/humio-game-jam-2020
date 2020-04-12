@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 270168529
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: pipes
+    uniqueID: 1185894733
     locked: 0

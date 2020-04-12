@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
   m_Name: CoffeePowder
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 47304e5b85aa582858c169c20fd1e374, type: 3}
+  icon: {fileID: 21300000, guid: 57845acd9d3dc6cfdb134886c75756d4, type: 3}
   name: Coffee Powder
   description: Brown powder
-  ingredients: []
