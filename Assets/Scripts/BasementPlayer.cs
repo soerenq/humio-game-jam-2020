@@ -41,9 +41,15 @@ public class BasementPlayer : MonoBehaviour
             dy = -1f;
         }
 
-        if (Mathf.Abs(dx) == 0f && Mathf.Abs(dy) == 0f) return;
-        rt.localRotation = Quaternion.EulerAngles(0f, 0f, Mathf.Atan2(dy, dx));
-        MoveAhead(rt);
+        if (Mathf.Abs(dx) == 0f && Mathf.Abs(dy) == 0f)
+        {
+            StopMoving();
+        }
+        else
+        {
+            rt.localRotation = Quaternion.EulerAngles(0f, 0f, Mathf.Atan2(dy, dx));
+            MoveAhead(rt);
+        }
     }
 
 
@@ -52,6 +58,12 @@ public class BasementPlayer : MonoBehaviour
         var rb = GetComponent<Rigidbody2D>();
         var direction = rt.localRotation * Vector3.right;
         rb.velocity = SPEED * direction; 
+    }
+
+    private void StopMoving()
+    {
+        var rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector3.zero; 
     }
 
     public void OnTouchedBySpider()
