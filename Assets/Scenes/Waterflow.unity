@@ -240,6 +240,10 @@ MonoBehaviour:
   - {fileID: 2042470106398017433, guid: e51476cd5cfa7452ebd5cc8f19b18ba2, type: 3}
   - {fileID: 345717220991681341, guid: e51c23d0785364840ac30bb1027fa571, type: 3}
   SelectedPipe: {fileID: 0}
+  WaterJugReward: {fileID: 3817623045773819278, guid: c864b066f494d48c39a730cd1d0c8fb7,
+    type: 3}
+  WaterJugEmpty: {fileID: 6437165669501060434, guid: 2b21c4fa7935a40579f1c13d6f55d7b1,
+    type: 3}
 --- !u!4 &295964088
 Transform:
   m_ObjectHideFlags: 0

@@ -23,6 +23,9 @@ public class WaterFlowManager : MonoBehaviour
 
     public GameObject SelectedPipe = null;
 
+    public GameObject WaterJugReward;
+    public GameObject WaterJugEmpty;
+
     private bool testFilled = false;
 
     private int gridHeight = 5;
@@ -96,14 +99,6 @@ public class WaterFlowManager : MonoBehaviour
     
     private bool isPipeNextToLatestPipe(GameObject clickedTile) {
         GameObject LastTile = pipeList[pipeList.Count - 1].gameObject;
-       /* if (LastTile.transform.position.x - clickedTile.transform.position.x < 1 || LastTile.transform.position.x - clickedTile.transform.position.x > 1) {
-            Debug.Log("1: " + (LastTile.transform.position.x - clickedTile.transform.position.x));
-            return false;
-        }
-        else if (LastTile.transform.position.y - clickedTile.transform.position.y < 1 || LastTile.transform.position.y - clickedTile.transform.position.y > 1) {
-            Debug.Log("2");
-            return false;
-        }*/
         if (LastTile.transform.position.x - clickedTile.transform.position.x == -1 || LastTile.transform.position.x - clickedTile.transform.position.x == 1 || LastTile.transform.position.x - clickedTile.transform.position.x == 0){
             if (LastTile.transform.position.y - clickedTile.transform.position.y == -1 || LastTile.transform.position.y - clickedTile.transform.position.y == 1 || LastTile.transform.position.y - clickedTile.transform.position.y == 0) {
                 return true;
@@ -118,8 +113,6 @@ public class WaterFlowManager : MonoBehaviour
         pipeList.Add(endPipe.GetComponent<Pipe>());
         // make water run
         StartCoroutine(testFlow());
-        // call the reward thing here:
-
     }
 
     private bool isPipePlacementAllowed(GameObject SelectedPipe, GameObject clickedTile){
@@ -208,6 +201,7 @@ public class WaterFlowManager : MonoBehaviour
         }
         generatePipeBar();
         PlaceStartAndEndPipe();
+        PlaceWaterJugReward();
     }
 
 
@@ -243,6 +237,10 @@ public class WaterFlowManager : MonoBehaviour
         
     }
 
+    private void PlaceWaterJugReward() {
+        WaterJugEmpty = Instantiate(WaterJugEmpty, new Vector3(gridWidth, 3, 0), Quaternion.identity);
+    }
+
     private void ToggleWater(bool filled) {
         foreach (Pipe pipe in pipeList) {
             pipe.ToggleSprite(filled);
@@ -257,5 +255,12 @@ public class WaterFlowManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
         ToggleWater(false);
-    }   
+        spawnWaterJug();
+
+    }  
+
+    private void spawnWaterJug(){
+        Instantiate(WaterJugReward, new Vector3(gridWidth, 3, 0), Quaternion.identity);
+        Destroy(WaterJugEmpty);
+    } 
 }
