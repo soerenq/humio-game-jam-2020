@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6166595759542714841
+--- !u!1 &3310506794257895065
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6166595759542714837}
-  - component: {fileID: 6166595759542714836}
-  - component: {fileID: 6166595759542714839}
-  - component: {fileID: 6166595759542714838}
+  - component: {fileID: 3310506794257895061}
+  - component: {fileID: 3310506794257895062}
+  - component: {fileID: 3310506794257895063}
+  - component: {fileID: 3310506794257895064}
   m_Layer: 0
-  m_Name: CoffeeGrinder
+  m_Name: book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6166595759542714837
+--- !u!4 &3310506794257895061
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166595759542714841}
+  m_GameObject: {fileID: 3310506794257895065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.09, y: -0.14, z: 0}
-  m_LocalScale: {x: 0.61, y: 0.46, z: 1}
+  m_LocalPosition: {x: 0.12, y: -2.07, z: 0}
+  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6166595759542714836
+--- !u!212 &3310506794257895062
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166595759542714841}
+  m_GameObject: {fileID: 3310506794257895065}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,24 +72,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0197f4a5afcc194c4a066a8676b3654e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f3bfa9827e5884eba19606a5ff0a212, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 2.51, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6166595759542714839
+--- !u!61 &3310506794257895063
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166595759542714841}
+  m_GameObject: {fileID: 3310506794257895065}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -100,29 +100,31 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
+    oldSize: {x: 2.51, y: 0.38}
+    newSize: {x: 2.51, y: 0.38}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 2.51, y: 0.38}
   m_EdgeRadius: 0
---- !u!114 &6166595759542714838
+--- !u!114 &3310506794257895064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166595759542714841}
+  m_GameObject: {fileID: 3310506794257895065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e0a865c1d84d7bb5576743783ab2e2, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d0ae87e2ed46e38a0569a1362b46c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   requires:
-  - {fileID: 11400000, guid: b43dc88b1d185c93fbfcfb92ba2dfb87, type: 2}
+  - {fileID: 11400000, guid: 055a6816c5b6ead14ba65083bd8ea7ae, type: 2}
   orderMatters: 0
-  produces:
-  - {fileID: 11400000, guid: 23c09b28e02af8b62b414d5691bb9965, type: 2}
+  droppableName: Where is Owlie
+  description: Interesting book. However it requires you to sit still while looking.
+    Maybe you need something to devour while doing so?
+  sceneName: Waldo

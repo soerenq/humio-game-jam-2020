@@ -22,7 +22,6 @@ namespace Humio
             if (_instance == null)
             {
                 _instance = this;
-                DontDestroyOnLoad(gameObject);
             }
             else
             {

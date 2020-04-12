@@ -128,4 +128,5 @@ MonoBehaviour:
   orderMatters: 1
   droppableName: A coffee maker
   description: Brews that brown goo that adults like
-  produces: []
+  produces:
+  - {fileID: 11400000, guid: 4f51a08bce5d76dafa014a92bb97b506, type: 2}

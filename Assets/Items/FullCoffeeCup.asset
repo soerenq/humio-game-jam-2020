@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
-  m_Name: CoffeePowder
+  m_Name: FullCoffeeCup
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 57845acd9d3dc6cfdb134886c75756d4, type: 3}
-  name: Coffee Powder
-  description: Brown powder
+  icon: {fileID: 21300000, guid: e302ee5df3f83337bb5cc21ec8b28009, type: 3}
+  name: Full coffee cup
+  description: Filled with a warm liquid

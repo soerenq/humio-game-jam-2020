@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262418059705669213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58, y: -4.26, z: -0.95219845}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.644, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0197f4a5afcc194c4a066a8676b3654e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 974c45283e340fec6a78d625cc40754e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,5 +97,8 @@ MonoBehaviour:
   requires:
   - {fileID: 11400000, guid: 743be95d775e6d9f7be87fd143b4fd31, type: 2}
   orderMatters: 0
+  droppableName: A huge bowl of candy
+  description: 'Maybe you can use this to brew something that will give an immense
+    energy boost '
   produces:
   - {fileID: 11400000, guid: c1a55eb995a17fb55ab99c3bb9a13538, type: 2}

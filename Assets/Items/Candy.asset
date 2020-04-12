@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 526801b3962e4eb55b2309d7017efba7, type: 3}
-  m_Name: CoffeePowder
+  m_Name: Candy
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 57845acd9d3dc6cfdb134886c75756d4, type: 3}
-  name: Coffee Powder
-  description: Brown powder
+  icon: {fileID: 21300000, guid: 0cf95a00fa705d4e784e523b2e5132ea, type: 3}
+  name: Candy
+  description: Really sweet
