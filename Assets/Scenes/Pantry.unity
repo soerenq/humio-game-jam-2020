@@ -620,7 +620,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
+    serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &460370693
@@ -690,7 +690,7 @@ Transform:
 --- !u!1001 &461058249
 PrefabInstance:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
+    serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
@@ -827,7 +827,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
+    serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &514275697
@@ -972,7 +972,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
+    serializedVersion: 2
   m_Size: {x: 0.6, y: 2.25}
   m_EdgeRadius: 0
 --- !u!212 &667743575
@@ -1784,7 +1784,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
+    serializedVersion: 2
   m_Size: {x: 2.3, y: 0.67}
   m_EdgeRadius: 0
 --- !u!212 &1091665160
