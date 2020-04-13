@@ -1,15 +1,19 @@
 ﻿using System;
 using Humio;
 using UnityEngine;
+using Random = System.Random;
 
 public class BoyController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D boy;
     [SerializeField] private int jumpHeight = 100;
     [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private AudioClip scream;
+    [SerializeField] private AudioClip scream1;
+    [SerializeField] private AudioClip scream2;
+    [SerializeField] private AudioClip scream3;
     [SerializeField] private BoxCollider2D coffeBeansCollider;
-    
+
+    private Random _random;
     private bool _isActive;
     private SpriteRenderer _spriteInstance;
     private Vector3 _initialPosition;
@@ -17,6 +21,7 @@ public class BoyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _random = new Random(DateTime.Now.Millisecond);
         _spriteInstance = gameObject.GetComponent<SpriteRenderer>();
         _initialPosition = _spriteInstance.transform.position;
         
@@ -56,8 +61,11 @@ public class BoyController : MonoBehaviour
         var direction = CalculateDirection();
  
         boy.AddForce(initialVelocity * direction, ForceMode2D.Impulse);
-        
-        audioPlayer.PlayOneShot(scream);
+
+        var random = _random.Next(1, 100) % 3;
+        if(random == 0) audioPlayer.PlayOneShot(scream1);
+        if(random == 1) audioPlayer.PlayOneShot(scream2);
+        if(random == 2) audioPlayer.PlayOneShot(scream3);
     }
 
     private Vector3 CalculateDirection()

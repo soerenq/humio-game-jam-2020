@@ -749,7 +749,9 @@ MonoBehaviour:
   boy: {fileID: 1694195408}
   jumpHeight: 100
   audioPlayer: {fileID: 1275409912}
-  scream: {fileID: 0}
+  scream1: {fileID: 8300000, guid: 72aaf36608ffa432c8e864a8ab585bf2, type: 3}
+  scream2: {fileID: 8300000, guid: 868677126e83c4692b77d13feba3614c, type: 3}
+  scream3: {fileID: 8300000, guid: 4f141e1c9284b4ff291ca295d2ae6d07, type: 3}
   coffeBeansCollider: {fileID: 461058250}
 --- !u!212 &939732659
 SpriteRenderer:
@@ -1192,7 +1194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330954440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6509128, y: -9.668046, z: 50.31874}
+  m_LocalPosition: {x: 2.6509128, y: -8.5, z: 50.31874}
   m_LocalScale: {x: 22.65088, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2060011580}
