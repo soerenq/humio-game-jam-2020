@@ -35,18 +35,18 @@ public class BoyController : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log($"Activated pantry controller. Current position = {_spriteInstance.transform.position}");
+        //Debug.Log($"Activated pantry controller. Current position = {_spriteInstance.transform.position}");
         _isActive = true;
     }
 
     private void OnMouseUp()
     {
-        Debug.Log($"Released pantry controller Current position = {_spriteInstance.transform.position}");
+        //Debug.Log($"Released pantry controller Current position = {_spriteInstance.transform.position}");
         _isActive = false;
 
         JumpTowardPoint();
         
-        Debug.Log($"Resetting position to position = {_initialPosition}");
+        //Debug.Log($"Resetting position to position = {_initialPosition}");
         _spriteInstance.transform.position = _initialPosition;
     }
     

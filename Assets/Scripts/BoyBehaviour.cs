@@ -34,7 +34,6 @@ public class BoyBehaviour : MonoBehaviour
         var interactable = other.GetComponent<Collider2D>().GetComponent<Interactable>();
         if (interactable != null)
         {
-            Debug.Log($"Boy interacting with {interactable.name} | {interactable}");
             interactable.Interact();
         }
     }
